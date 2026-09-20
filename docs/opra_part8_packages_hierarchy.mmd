@@ -1,0 +1,42 @@
+%% OpRa Part 8 – Management Information & Statistics (MI)
+%% Package hierarchy diagram (Mermaid flowchart source).
+%% Companion source to opra_part8_packages_hierarchy.svg / .png / .dot
+%% Auto-rendered via: mmdc -i opra_part8_packages_hierarchy.mmd -o opra_part8_packages_hierarchy.svg
+flowchart LR
+  root["Part 8 - Management Information & Statistics (MI)"]
+
+  EF["EF Explicit Frame MODELs"]
+  ID["ID Indicator MODELs"]
+  RC["RC Reusable Components MODELs"]
+  QM["QM Query MODEL"]
+
+  root --> EF
+  root --> ID
+  root --> RC
+  root --> QM
+
+  EF --> AF["AF Actual Frame MODEL"]
+  EF --> CI["CI Contextual Indicator Frame MODEL"]
+  EF --> PF["PF Planned Frame MODEL"]
+  EF --> RF["RF Indicator Frame MODEL"]
+
+  ID --> CJ["CJ Cancelled Dated Vehicle Journeys MODELs"]
+  ID --> EX["EX Expected Number of Passengers MODELs"]
+  ID --> FD["FD Fleet Dimensions Indicators MODELs"]
+  ID --> LJ["LJ Late Dated Vehicle Journeys MODELs"]
+  ID --> OC["OC Offered Capacity MODELs"]
+  ID --> PX["PX Measured Number of Passengers MODELs"]
+  ID --> SD["SD Service Dimensions Indicator MODELs"]
+  ID --> SI["SI Service Intensity Indicators MODELs"]
+
+  CJ --> UC1["UC Use Cases"]
+  SD --> UC2["UC Use Cases"]
+  FD --> UC3["UC Use Cases"]
+  OC --> UC4["UC Use Cases"]
+
+  RC --> DM["DM Data Managed Object MODEL"]
+  RC --> FS["FS Filtering Support MODELs"]
+  RC --> GA["GA Generic Aggregations MODELs"]
+  RC --> LT["LT Logging Time and Place MODEL"]
+  RC --> RT["RT Recorded Trip MODEL"]
+  RC --> RV["RV Recorded Vehicle MODELs"]

@@ -1,0 +1,81 @@
+%% OpRa Part 8 – Management Information & Statistics (MI)
+%% Package Tree with Class Diagrams
+%% Source: EA Model TransmodelEcoSystem2024-EAv16-nk84_OpRa-v13.qea
+%% Updated: 2026-05-14
+
+flowchart TB
+  root["Part 8 - Management Information & Statistics (MI)"]
+
+  EF["EF Explicit Frame MODELs"]
+  ID["ID Indicator MODELs"]
+  RC["RC Reusable Components MODELs"]
+  QM["QM Query MODEL"]
+
+  root --> EF
+  root --> ID
+  root --> RC
+  root --> QM
+
+  EF --> EF_DIAG["MI EF Explicit Frame Hierarchy MODEL"]
+
+  ID --> ID_DIAG["MI ID Indicator MODEL"]
+
+  QM --> QM1["QM OpRa Functional Delivery MODEL"]
+  QM --> QM2["QM OpRa Functional Request MODEL"]
+  QM --> QM3["QM OpRa Query Hierarchy [INFO]"]
+  QM --> QM4["QM OpRa Request and Delivery MODEL"]
+
+  RC --> AF["AF Actual Frame MODEL"]
+  RC --> CI["CI Contextual Indicator Frame MODEL"]
+  RC --> CJ["CJ Cancelled Dated Vehicle Journeys MODELs"]
+  RC --> DM["DM Data Managed Object MODEL"]
+  RC --> EX["EX Expected Number of Passengers MODELs"]
+  RC --> FD["FD Fleet Dimensions Indicators MODELs"]
+  RC --> FS["FS Filtering Supoort MODELs"]
+  RC --> GA["GA Generic Aggregations MODELs"]
+  RC --> LJ["LJ Late Dated Vehicle Journeys MODELs"]
+  RC --> LT["LT Logging Time and Place MODEL"]
+  RC --> OC["OC Offered Capacity MODELs"]
+  RC --> PF["PF Planned Frame MODEL"]
+  RC --> PX["PX Measured Number of Passengers MODELs"]
+  RC --> RF["RF Indicator Frame MODEL"]
+  RC --> RT["RT Recorded Trip MODEL"]
+  RC --> RV["RV Recorded Vehicle MODELs"]
+  RC --> SD["SD Service Dimensions Indicator MODELs"]
+  RC --> SI["SI Service Intensity Indicators MODELs"]
+
+  AF --> AF_DIAG["MI AF Actual Frame MODEL"]
+  CI --> CI_DIAG["MI CI Contextual Indicator Frame MODEL"]
+  CJ --> CJ1["MI CJ Cancelled Journeys Aggregations MODEL"]
+  CJ --> CJ2["MI CJ Number of Cancelled Journeys MODEL"]
+  DM --> DM_DIAG["MI DM Data Managed Object MODEL"]
+  EX --> EX_DIAG["MI EX Expected Number of Passenger MODEL"]
+  FD --> FD_DIAG["MI ID Fleet Dimensions MODEL"]
+  FS --> FS1["MI CA Calendar Aware PT Scope MODEL"]
+  FS --> FS2["MI FS Fleet Scope MODEL"]
+  GA --> GA_DIAG["MI GA Interval Occurrences Aggregation MODEL"]
+  LJ --> LJ1["MI LJ Late Journeys Aggregations MODEL"]
+  LJ --> LJ2["MI LJ Number of Late Journeys MODEL"]
+  LT --> LT_DIAG["MI Logging Time and Place MODEL"]
+  OC --> OC_DIAG["MI OC Offered Capacity MODEL"]
+  PF --> PF_DIAG["MI PF Planned Frame MODEL"]
+  PX --> PX1["MI PX Number of Passengers (validated access) MODEL"]
+  PX --> PX2["MI PX Number of Passengers (counts at stops) MODEL"]
+  PX --> PX3["MI PX Number of Passengers (counting device) MODEL"]
+  RF --> RF_DIAG["MI RF Indicator Frame MODEL"]
+  RT --> RT_DIAG["MI Recorded Trip MODEL"]
+  RV --> RV1["MI Recorded Objects MODEL Basic [INFO]"]
+  RV --> RV2["MI Recorded Vehicle MODEL"]
+  SD --> SD_DIAG["MI SD Service Dimension Indicator MODEL"]
+  SI --> SI1["MI SI Capacity Over Distance MODEL"]
+  SI --> SI2["MI SI Service Intensity Indicator MODEL"]
+
+  SI2 --> UC1["MI UC Actual Capacity MODEL"]
+  SI2 --> UC2["MI UC Planned Fleet Dimensions MODEL"]
+  SI2 --> UC3["MI UC Planned Service Dimensions MODEL"]
+
+  classDef package fill:#eef2f7,stroke:#637282,stroke-width:2px,color:#000;
+  classDef diagram fill:#ffffff,stroke:#4b5563,stroke-width:1px,color:#000;
+
+  class root,EF,ID,RC,QM package;
+  class AF,CI,CJ,DM,EX,FD,FS,GA,LJ,LT,OC,PF,PX,RF,RT,RV,SD,SI,EF_DIAG,ID_DIAG,QM1,QM2,QM3,QM4,AF_DIAG,CI_DIAG,CJ1,CJ2,DM_DIAG,EX_DIAG,FD_DIAG,FS1,FS2,GA_DIAG,LJ1,LJ2,LT_DIAG,OC_DIAG,PF_DIAG,PX1,PX2,PX3,RF_DIAG,RT_DIAG,RV1,RV2,SD_DIAG,SI1,SI2,UC1,UC2,UC3 diagram;

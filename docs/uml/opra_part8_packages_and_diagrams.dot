@@ -1,0 +1,154 @@
+// OpRa Part 8 – Management Information & Statistics (MI)
+// Package tree with EA class diagrams
+// Source: EA Model TransmodelEcoSystem2024-EAv16-nk84_OpRa-v13.qea
+// Updated: 2026-05-14
+
+strict digraph G {
+    rankdir=TB;
+    splines=spline;
+    overlap=false;
+    sep="+0.5,+0.5";
+    bgcolor="#fbfaf7";
+
+    node [shape=box, style="rounded,filled", fontname="Arial", fontsize=10, margin="0.08,0.05"];
+    edge [color="#6b7280", penwidth=1.2, arrowsize=0.8];
+
+    root [label="Part 8 - Management Information\n& Statistics (MI)",
+          fillcolor="#eef2f7", color="#637282", penwidth=2, fontsize=12, fontweight=bold];
+
+    // Category packages
+    EF [label="EF Explicit Frame MODELs", fillcolor="#fae6e6", color="#c98c8c", penwidth=2];
+    ID [label="ID Indicator MODELs", fillcolor="#face87", color="#c38a2f", penwidth=2];
+    QM [label="QM Query MODEL", fillcolor="#ffa07a", color="#cf6e44", penwidth=2];
+    RC [label="RC Reusable Components MODELs", fillcolor="#d5efff", color="#77a8c7", penwidth=2];
+
+    root -> EF;
+    root -> ID;
+    root -> RC;
+    root -> QM;
+
+    // Force left-to-right order so QM renders last
+    EF -> ID [style=invis, weight=10];
+    ID -> RC [style=invis, weight=10];
+    RC -> QM [style=invis, weight=10];
+
+    // EF package diagrams
+    EF_DIAG [label="MI EF Explicit Frame Hierarchy MODEL", shape=note, fillcolor="#fff7f7", color="#c98c8c", penwidth=1.5];
+    EF -> EF_DIAG;
+
+    // ID package diagrams
+    ID_DIAG [label="MI ID Indicator MODEL", shape=note, fillcolor="#fff8ea", color="#c38a2f", penwidth=1.5];
+    ID -> ID_DIAG;
+
+    // QM package diagrams
+    QM1 [label="QM OpRa Functional Delivery MODEL", shape=note, fillcolor="#fff2ec", color="#cf6e44", penwidth=1.5];
+    QM2 [label="QM OpRa Functional Request MODEL", shape=note, fillcolor="#fff2ec", color="#cf6e44", penwidth=1.5];
+    QM3 [label="QM OpRa Query Hierarchy [INFO]", shape=note, fillcolor="#fff2ec", color="#cf6e44", penwidth=1.5];
+    QM4 [label="QM OpRa Request and Delivery MODEL", shape=note, fillcolor="#fff2ec", color="#cf6e44", penwidth=1.5];
+    QM -> QM1;
+    QM -> QM2;
+    QM -> QM3;
+    QM -> QM4;
+
+    // RC subpackages
+    AF [label="AF Actual Frame MODEL", fillcolor="#fae6e6", color="#c98c8c"];
+    CI [label="CI Contextual Indicator Frame MODEL", fillcolor="#fae6e6", color="#c98c8c"];
+    CJ [label="CJ Cancelled Dated Vehicle Journeys MODELs", fillcolor="#face87", color="#c38a2f"];
+    DM [label="DM Data Managed Object MODEL", fillcolor="#d5efff", color="#77a8c7"];
+    EX [label="EX Expected Number of Passengers MODELs", fillcolor="#face87", color="#c38a2f"];
+    FD [label="FD Fleet Dimensions Indicators MODELs", fillcolor="#face87", color="#c38a2f"];
+    FS [label="FS Filtering Supoort MODELs", fillcolor="#d5efff", color="#77a8c7"];
+    GA [label="GA Generic Aggregations MODELs", fillcolor="#d5efff", color="#77a8c7"];
+    LJ [label="LJ Late Dated Vehicle Journeys MODELs", fillcolor="#face87", color="#c38a2f"];
+    LT [label="LT Logging Time and Place MODEL", fillcolor="#d5efff", color="#77a8c7"];
+    OC [label="OC Offered Capacity MODELs", fillcolor="#face87", color="#c38a2f"];
+    PF [label="PF Planned Frame MODEL", fillcolor="#fae6e6", color="#c98c8c"];
+    PX [label="PX Measured Number of Passengers MODELs", fillcolor="#face87", color="#c38a2f"];
+    RF [label="RF Indicator Frame MODEL", fillcolor="#fae6e6", color="#c98c8c"];
+    RT [label="RT Recorded Trip MODEL", fillcolor="#d5efff", color="#77a8c7"];
+    RV [label="RV Recorded Vehicle MODELs", fillcolor="#d5efff", color="#77a8c7"];
+    SD [label="SD Service Dimensions Indicator MODELs", fillcolor="#face87", color="#c38a2f"];
+    SI [label="SI Service Intensity Indicators MODELs", fillcolor="#face87", color="#c38a2f"];
+
+    RC -> AF;
+    RC -> CI;
+    RC -> CJ;
+    RC -> DM;
+    RC -> EX;
+    RC -> FD;
+    RC -> FS;
+    RC -> GA;
+    RC -> LJ;
+    RC -> LT;
+    RC -> OC;
+    RC -> PF;
+    RC -> PX;
+    RC -> RF;
+    RC -> RT;
+    RC -> RV;
+    RC -> SD;
+    RC -> SI;
+
+    // RC package diagrams
+    AF_DIAG [label="MI AF Actual Frame MODEL", shape=note, fillcolor="#fff7f7", color="#c98c8c", penwidth=1.5];
+    CI_DIAG [label="MI CI Contextual Indicator Frame MODEL", shape=note, fillcolor="#fff7f7", color="#c98c8c", penwidth=1.5];
+    CJ1 [label="MI CJ Cancelled Journeys Aggregations MODEL", shape=note, fillcolor="#fff8ea", color="#c38a2f", penwidth=1.5];
+    CJ2 [label="MI CJ Number of Cancelled Journeys MODEL", shape=note, fillcolor="#fff8ea", color="#c38a2f", penwidth=1.5];
+    DM_DIAG [label="MI DM Data Managed Object MODEL", shape=note, fillcolor="#f3fbff", color="#77a8c7", penwidth=1.5];
+    EX_DIAG [label="MI EX Expected Number of Passenger MODEL", shape=note, fillcolor="#fff8ea", color="#c38a2f", penwidth=1.5];
+    FD_DIAG [label="MI ID Fleet Dimensions MODEL", shape=note, fillcolor="#fff8ea", color="#c38a2f", penwidth=1.5];
+    FS1 [label="MI CA Calendar Aware PT Scope MODEL", shape=note, fillcolor="#f3fbff", color="#77a8c7", penwidth=1.5];
+    FS2 [label="MI FS Fleet Scope MODEL", shape=note, fillcolor="#f3fbff", color="#77a8c7", penwidth=1.5];
+    GA_DIAG [label="MI GA Interval Occurrences Aggregation MODEL", shape=note, fillcolor="#f3fbff", color="#77a8c7", penwidth=1.5];
+    LJ1 [label="MI LJ Late Journeys Aggregations MODEL", shape=note, fillcolor="#fff8ea", color="#c38a2f", penwidth=1.5];
+    LJ2 [label="MI LJ Number of Late Journeys MODEL", shape=note, fillcolor="#fff8ea", color="#c38a2f", penwidth=1.5];
+    LT_DIAG [label="MI Logging Time and Place MODEL", shape=note, fillcolor="#f3fbff", color="#77a8c7", penwidth=1.5];
+    OC_DIAG [label="MI OC Offered Capacity MODEL", shape=note, fillcolor="#fff8ea", color="#c38a2f", penwidth=1.5];
+    PF_DIAG [label="MI PF Planned Frame MODEL", shape=note, fillcolor="#fff7f7", color="#c98c8c", penwidth=1.5];
+    PX1 [label="MI PX Number of Passengers (validated access) MODEL", shape=note, fillcolor="#fff8ea", color="#c38a2f", penwidth=1.5];
+    PX2 [label="MI PX Number of Passengers (counts at stops) MODEL", shape=note, fillcolor="#fff8ea", color="#c38a2f", penwidth=1.5];
+    PX3 [label="MI PX Number of Passengers (counting device) MODEL", shape=note, fillcolor="#fff8ea", color="#c38a2f", penwidth=1.5];
+    RF_DIAG [label="MI RF Indicator Frame MODEL", shape=note, fillcolor="#fff7f7", color="#c98c8c", penwidth=1.5];
+    RT_DIAG [label="MI Recorded Trip MODEL", shape=note, fillcolor="#f3fbff", color="#77a8c7", penwidth=1.5];
+    RV1 [label="MI Recorded Objects MODEL Basic [INFO]", shape=note, fillcolor="#f3fbff", color="#77a8c7", penwidth=1.5];
+    RV2 [label="MI Recorded Vehicle MODEL", shape=note, fillcolor="#f3fbff", color="#77a8c7", penwidth=1.5];
+    SD_DIAG [label="MI SD Service Dimension Indicator MODEL", shape=note, fillcolor="#fff8ea", color="#c38a2f", penwidth=1.5];
+    SI1 [label="MI SI Capacity Over Distance MODEL", shape=note, fillcolor="#fff8ea", color="#c38a2f", penwidth=1.5];
+    SI2 [label="MI SI Service Intensity Indicator MODEL", shape=note, fillcolor="#fff8ea", color="#c38a2f", penwidth=1.5];
+    UC1 [label="MI UC Actual Capacity MODEL", shape=note, fillcolor="#fff8ea", color="#c38a2f", penwidth=1.5];
+    UC2 [label="MI UC Planned Fleet Dimensions MODEL", shape=note, fillcolor="#fff8ea", color="#c38a2f", penwidth=1.5];
+    UC3 [label="MI UC Planned Service Dimensions MODEL", shape=note, fillcolor="#fff8ea", color="#c38a2f", penwidth=1.5];
+
+    AF -> AF_DIAG;
+    CI -> CI_DIAG;
+    CJ -> CJ1;
+    CJ -> CJ2;
+    DM -> DM_DIAG;
+    EX -> EX_DIAG;
+    FD -> FD_DIAG;
+    FS -> FS1;
+    FS -> FS2;
+    GA -> GA_DIAG;
+    LJ -> LJ1;
+    LJ -> LJ2;
+    LT -> LT_DIAG;
+    OC -> OC_DIAG;
+    PF -> PF_DIAG;
+    PX -> PX1;
+    PX -> PX2;
+    PX -> PX3;
+    RF -> RF_DIAG;
+    RT -> RT_DIAG;
+    RV -> RV1;
+    RV -> RV2;
+    SD -> SD_DIAG;
+    SI -> SI1;
+    SI -> SI2;
+    SI2 -> UC1;
+    SI2 -> UC2;
+    SI2 -> UC3;
+
+    // Rank hints for a cleaner top-level structure
+    { rank=same; EF; ID; RC; QM; }
+    { rank=same; EF_DIAG; ID_DIAG; QM1; QM2; QM3; QM4; }
+}
