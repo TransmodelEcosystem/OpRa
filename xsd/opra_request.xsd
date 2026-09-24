@@ -245,7 +245,7 @@
 	</xsd:complexType>
 	<xsd:element name="OpraSubscriptionRequest" type="OpraSubscriptionRequestStructure">
 		<xsd:annotation>
-			<xsd:documentation>General OpRa Subscription Request that subscribes to PublicationDelivery responses.</xsd:documentation>
+			<xsd:documentation>General OpRa Subscription Request that subscribes to PublicationDelivery deliveries.</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 	<xsd:complexType name="OpraSubscriptionRequestStructure">

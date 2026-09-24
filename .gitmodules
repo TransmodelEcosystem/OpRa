@@ -1,14 +1,10 @@
 [submodule "NeTEx"]
 	path = NeTEx
-	url = https://github.com/NeTEx-CEN/NeTEx
+	url = https://github.com/TransmodelEcosystem/NeTEx
 	branch = v2.0
-	ignore = dirty
-[submodule "OJP"]
-	path = OJP
-	url = https://github.com/VDVde/OJP
 	ignore = dirty
 [submodule "SIRI"]
 	path = SIRI
-	url = https://github.com/Aurige/SIRI
-	branch = SIRI-for-OpRa
+	url = https://github.com/TransmodelEcosystem/SIRI
+	branch = v2.2
 	ignore = dirty
