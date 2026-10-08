@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Opra xmlns="https://transmodel-cen.eu/opra/1.0" xmlns:netex="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://transmodel-cen.eu/opra/1.0 ../xsd/opra.xsd">
+	<ServiceDelivery>
+		<siri:ResponseTimestamp>2025-12-17T09:30:47Z</siri:ResponseTimestamp>
+		<siri:ProducerRef>
+			OpraExamples</siri:ProducerRef>
+		<opraFunctionalDeliveries>
+			<OpraPayloadDelivery>
+				<siri:ResponseTimestamp>2025-12-17T09:30:47Z</siri:ResponseTimestamp>
+				<Description>Actual service intensity on the sample network.</Description>
+				<dataObjects>
+					<IndicatorFrame>
+						<PreparednessLevel>Raw</PreparednessLevel>
+						<indicators>
+							<ActualServiceIntensity>
+								<Description>Line+direction T1-T3a, aggregated for weekend
+									operation over one month.</Description>
+								<netex:AuthorityRef ref="Test:Authority:1"/>
+								<netex:OperatorRef ref="Test:Operator:OpraBus"/>
+								<netex:NetworkRef ref="Test:Network:Main"/>
+								<netex:VehicleMode>bus</netex:VehicleMode>
+								<netex:JourneyPatternRef ref="Test:JP:10:T1-T3a"/>
+								<netex:DayTypeRef ref="Test:DayType:Weekend"/>
+								<netex:TimebandRef ref="Test:TimeBand:Month:2025-11"/>
+								<MeanCapacityOverJourneyDistance>
+									<netex:FareClass>standardClass</netex:FareClass>
+									<netex:TotalCapacity>250</netex:TotalCapacity>
+									<netex:SeatingCapacity>89</netex:SeatingCapacity>
+									<netex:StandingCapacity>160</netex:StandingCapacity>
+									<netex:WheelchairPlaceCapacity>3</netex:WheelchairPlaceCapacity>
+									<Distance>124600</Distance>
+								</MeanCapacityOverJourneyDistance>
+								<LoadOverJourneyDistance>
+									<netex:FareClass>standardClass</netex:FareClass>
+									<netex:TotalCapacity>16</netex:TotalCapacity>
+									<netex:SeatingCapacity>6</netex:SeatingCapacity>
+									<netex:StandingCapacity>10</netex:StandingCapacity>
+									<netex:WheelchairPlaceCapacity>1</netex:WheelchairPlaceCapacity>
+									<Distance>124600</Distance>
+								</LoadOverJourneyDistance>
+								<TransportPerformance>
+									<netex:FareClass>standardClass</netex:FareClass>
+									<netex:TotalCapacity>2670</netex:TotalCapacity>
+									<netex:SeatingCapacity>953</netex:SeatingCapacity>
+									<netex:StandingCapacity>1716</netex:StandingCapacity>
+									<netex:WheelchairPlaceCapacity>38</netex:WheelchairPlaceCapacity>
+									<Distance>124600</Distance>
+								</TransportPerformance>
+								<TransportPerformancePerVehicle>
+									<netex:FareClass>standardClass</netex:FareClass>
+									<netex:TotalCapacity>607</netex:TotalCapacity>
+									<netex:SeatingCapacity>217</netex:SeatingCapacity>
+									<netex:StandingCapacity>390</netex:StandingCapacity>
+									<netex:WheelchairPlaceCapacity>8</netex:WheelchairPlaceCapacity>
+									<Distance>62300</Distance>
+									<VehicleCount>2</VehicleCount>
+								</TransportPerformancePerVehicle>
+								<AverageCommercialSpeed>8.3</AverageCommercialSpeed>
+							</ActualServiceIntensity>
+						</indicators>
+					</IndicatorFrame>
+				</dataObjects>
+			</OpraPayloadDelivery>
+		</opraFunctionalDeliveries>
+	</ServiceDelivery>
+</Opra>
