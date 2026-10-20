@@ -5,11 +5,11 @@
 
 - OpRa
 - using NeTEx as submodule (https://github.com/TransmodelEcosystem/NeTEx)
-- using SIRI as submodule (https://github.com/SIRI-CEN/SIRI)
+- using SIRI as submodule (https://github.com/TransmodelEcosystem//SIRI)
 
 ### Overview
 
-- OpRa (Operational Raw Data) - CEN/TS 17370 complements the Transmodel series (NeTEx for static data, SIRI for dynamic data) to provide a standardized format for exchanging historical data.
+- OpRa (Operational Raw Data) - **CEN/TS 17370:2026** complements the Transmodel series (NeTEx for static data, SIRI for dynamic data) to provide a standardized format for exchanging historical data.
 
 This version supports data exchange regarding public transport systems in four data groups:
 - Planned service data in PLANNED FRAMEs.
@@ -50,8 +50,6 @@ The individual XML files are organized hierarchically in folders in the **/xsd**
 
 - **Oxygen Project File**: 
    - Project file: OpRa.xpr
-
-----
 
 ### Note on the schema
 
